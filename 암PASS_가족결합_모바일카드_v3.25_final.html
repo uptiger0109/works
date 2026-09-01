@@ -1,0 +1,957 @@
+<title>암PASS플랜 · 추석 가족결합 가이드 v3.25</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --red:#2E7D6B;--red2:#215E51;--red3:#173F36;--gold:#B8924A;--gold2:#D9B871;
+  --ink:#1A1A18;--ink2:#4A4844;--ink3:#8A8880;--ink4:#C4C1B8;
+  --bg:#FAF7F0;--bg2:#F2EDE3;--bg3:#E8E2D5;--bd:#DED7C8;--bd2:#CCC4B2;
+  --cream:#FBF6EC;
+}
+html,body{width:100%;background:var(--bg3);font-family:'Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased;}
+body{ padding:24px 0; }
+.viewer{width:100%;max-width:430px;margin:0 auto;background:var(--cream);box-shadow:0 8px 40px rgba(20,16,8,0.25);}
+.card{width:100%;position:relative;overflow:hidden;display:flex;flex-direction:column;}
+
+.stitch{width:calc(100% - 72px);height:1px;background:#000;margin:15px 36px 0;flex-shrink:0;}
+
+/* COVER */
+.c01{background:var(--red);}
+.c01-body{flex:1;display:flex;flex-direction:column;justify-content:flex-start;padding:54px 36px 48px;}
+.c01-rule{width:100%;height:2px;background:#fff;}
+.c01-hookwrap{margin-top:28px;}
+.c01-hook{font-size:46px;font-weight:900;color:#fff;line-height:1.15;letter-spacing:-1.5px;word-break:keep-all;}
+.c01-hook .gold{color:var(--gold2);}
+.c01-rule2{width:100%;height:2px;background:rgba(255,255,255,.85);margin:28px 0 14px;}
+.c01-eyebrow-row{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:400;color:rgba(255,255,255,.6);width:100%;display:flex;justify-content:space-between;letter-spacing:1px;}
+.c01-sub{font-size:16px;font-weight:400;color:rgba(255,255,255,.80);line-height:1.6;letter-spacing:-.3px;word-break:keep-all;margin-top:22px;}
+.c01-badge-row{display:flex;align-items:center;gap:8px;margin-top:20px;flex-wrap:wrap;}
+.c01-badge{padding:4px 16px 6px;border:1.3px solid var(--gold2);border-radius:999px;background:transparent;font-size:13px;font-weight:700;color:var(--gold2);display:inline-flex;align-items:center;gap:5px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.c01-badge.solid{background:var(--gold2);color:var(--red3);border-color:var(--gold2);}
+.c01-badge .qi{width:14px;height:14px;border-radius:50%;border:1px solid currentColor;font-size:10px;line-height:12px;text-align:center;flex-shrink:0;opacity:.85;}
+
+/* ISSUE TAG */
+.tag-row{margin-top:32px;display:flex;align-items:center;gap:10px;}
+.tag-dot{width:18px;height:18px;border-radius:50%;border:1px solid var(--red);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.tag-txt{font-size:17px;font-weight:400;color:var(--ink2);}
+.idx{font-size:29px;font-weight:700;color:var(--bd2);margin-bottom:10px;padding-left:4px;}
+.pill{display:inline-block;background:var(--red);padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:.5px;color:#fff;margin-bottom:16px;border-radius:999px;}
+.pill.gold{background:var(--gold);}
+.issue-body{flex:1;display:flex;flex-direction:column;justify-content:flex-start;padding:20px 36px 26px;}
+.big{display:flex;align-items:baseline;gap:12px;margin-bottom:12px;}
+.big .n{font-size:72px;font-weight:600;color:var(--ink);line-height:.9;letter-spacing:-4px;}
+.big .u{font-size:24px;font-weight:600;color:var(--ink3);line-height:.9;letter-spacing:-1px;}
+.issue-title{font-size:27px;font-weight:900;color:var(--red);line-height:1.2;letter-spacing:-1px;word-break:keep-all;margin-bottom:16px;}
+.issue-p{font-size:16px;color:var(--ink2);line-height:1.65;word-break:keep-all;}
+.issue-p b{font-weight:700;color:var(--ink);}
+.issue-sub{font-size:14px;color:var(--ink3);line-height:1.6;margin-top:8px;word-break:keep-all;}
+
+/* icon list */
+.ilist{display:flex;flex-direction:column;gap:11px;margin-top:18px;margin-bottom:6px;}
+.ilist .row{display:flex;gap:11px;align-items:flex-start;}
+.ilist .mk{flex-shrink:0;font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:700;color:var(--red);line-height:1.5;}
+.ilist .tx{font-size:15px;color:var(--ink2);line-height:1.5;word-break:keep-all;}
+.ilist .tx b{color:var(--ink);font-weight:700;}
+
+/* stat3 */
+.stat3{display:flex;gap:8px;margin:18px 0 8px;}
+.stat3 .box{flex:1;background:var(--bg2);border:1px solid var(--bd);border-radius:14px;padding:14px 6px;text-align:center;}
+.stat3 .num{font-size:21px;font-weight:900;color:var(--red);line-height:1;}
+.stat3 .num small{font-size:11px;font-weight:700;}
+.stat3 .lbl{font-size:10.5px;color:var(--ink3);margin-top:6px;line-height:1.4;word-break:keep-all;}
+
+/* case card */
+.case-hl{background:var(--red);color:#fff;border-radius:16px;padding:16px 18px;margin:14px 0;}
+.case-hl .lbl{font-size:11px;letter-spacing:.5px;color:rgba(255,255,255,.7);margin-bottom:8px;}
+.case-hl .tx{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.96);}
+.case-hl .tx b{color:var(--gold2);}
+
+.tlmini{margin-top:14px;border-top:1px solid var(--bd);}
+.tlmini .row{display:flex;gap:10px;font-size:12.5px;color:var(--ink3);padding:7px 0;border-bottom:1px solid var(--bd);align-items:baseline;}
+.tlmini .d{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink4);min-width:66px;flex-shrink:0;}
+.tlmini .c{color:var(--ink2);}
+.tlmini .row.hl{background:rgba(46,125,107,.07);border-radius:8px;padding:7px 8px;margin:2px -8px;}
+.tlmini .row.hl .c{color:var(--red);font-weight:700;}
+.tlmini .row.hl .d{color:var(--red);}
+
+/* price table */
+.ptable{width:100%;border-collapse:collapse;margin-top:14px;font-size:13px;}
+.ptable th{background:var(--red);color:#fff;font-size:11px;font-weight:700;padding:9px 4px;}
+.ptable th:first-child{border-radius:8px 0 0 0;}
+.ptable th:last-child{border-radius:0 8px 0 0;}
+.ptable td{padding:9px 4px;text-align:center;border-bottom:1px solid var(--bd);color:var(--ink2);font-size:13.5px;}
+.ptable td:first-child{text-align:left;font-weight:700;color:var(--ink);padding-left:8px;}
+.ptable .hl{color:var(--red);font-weight:800;}
+.ptable tr:last-child td{border-bottom:none;}
+.tbl-note{font-size:11px;color:var(--ink3);margin-top:8px;line-height:1.5;}
+
+.feat-list{margin-top:14px;display:flex;flex-direction:column;gap:8px;}
+.feat-list .row{display:flex;justify-content:space-between;align-items:center;background:var(--bg2);border-radius:10px;padding:10px 12px;gap:8px;}
+.feat-list .k{font-size:12.5px;color:var(--ink2);line-height:1.4;}
+.feat-list .v{font-size:13.5px;font-weight:800;color:var(--red);flex-shrink:0;white-space:nowrap;}
+
+/* top3 */
+.top3{margin-top:14px;display:flex;flex-direction:column;gap:8px;}
+.top3 .row{display:flex;align-items:center;gap:10px;}
+.top3 .rank{width:22px;height:22px;border-radius:50%;background:var(--red);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.top3 .name{flex:1;font-size:13px;color:var(--ink2);}
+.top3 .pct{font-size:15px;font-weight:800;color:var(--red);}
+
+/* checklist card */
+.chk-wrap{flex:1;display:flex;flex-direction:column;justify-content:flex-start;padding:36px 24px;}
+.chk-box{border:2px solid var(--red);border-radius:20px;padding:28px 24px;}
+.chk-item{display:flex;align-items:flex-start;gap:14px;padding:13px 0;border-bottom:1px solid var(--bd);}
+.chk-item:last-child{border-bottom:none;}
+.chk-box-icon{width:22px;height:22px;border:1.5px solid var(--red);flex-shrink:0;margin-top:3px;border-radius:3px;}
+.chk-title{font-size:16.5px;font-weight:700;color:var(--ink);}
+.chk-sub{font-size:13.5px;color:var(--ink3);margin-top:4px;}
+
+/* faq */
+.faq-item{padding:14px 0;border-bottom:1px solid var(--bd);}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{display:flex;gap:8px;font-size:15.5px;font-weight:800;color:var(--ink);line-height:1.5;word-break:keep-all;}
+.faq-q .qmark{color:var(--gold);flex-shrink:0;}
+.faq-a{display:flex;gap:8px;margin-top:8px;font-size:14px;color:var(--ink2);line-height:1.65;word-break:keep-all;}
+.faq-a .amark{color:var(--red);font-weight:800;flex-shrink:0;}
+.faq-a b{color:var(--ink);font-weight:700;}
+
+/* CTA */
+.c08-body{flex:1;display:flex;flex-direction:column;justify-content:flex-start;padding:46px 36px 0;}
+.c08-eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;color:rgba(255,255,255,.65);letter-spacing:2px;margin-bottom:14px;}
+.c08-headline{font-size:46px;font-weight:900;color:#fff;line-height:1.06;letter-spacing:-2px;word-break:keep-all;margin-bottom:22px;}
+.c08-sub{font-size:17px;font-weight:400;color:rgba(255,255,255,.92);line-height:1.7;word-break:keep-all;margin-bottom:28px;}
+.c08-sub strong{font-weight:700;color:var(--gold2);}
+.c08-footer{padding:22px 36px 28px;flex-shrink:0;}
+.c08-footer p{font-size:12px;color:rgba(255,255,255,.7);letter-spacing:.5px;text-align:left;line-height:1.5;}
+.c08-disclaimer{font-size:11px;color:rgba(255,255,255,.78);line-height:1.6;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.15);}
+
+.btn{background:#fff;border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:8px;text-decoration:none;}
+.btn-dot{width:18px;height:18px;border-radius:50%;border:1px solid var(--red);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.btn-label{font-size:15px;font-weight:700;color:var(--red);}
+.btn-meta{font-size:13px;color:var(--ink3);margin-left:auto;}
+
+/* DETAIL TRIGGER */
+.detail-btn{margin-top:16px;align-self:flex-start;background:transparent;border:1.3px solid var(--red);color:var(--red);font-family:'Noto Sans KR',sans-serif;font-size:13px;font-weight:700;padding:8px 16px 9px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;-webkit-tap-highlight-color:transparent;}
+.detail-btn:active{background:rgba(46,125,107,.1);}
+.detail-btn .plus{font-family:'JetBrains Mono',monospace;font-size:14px;line-height:1;}
+
+/* disclaimer strip */
+.mini-note{margin-top:16px;font-size:11.5px;color:var(--ink3);line-height:1.6;border-top:1px dashed var(--bd);padding-top:10px;}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(14,20,18,.58);display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .22s ease;z-index:1000;}
+.modal-overlay.open{opacity:1;pointer-events:auto;}
+.modal-panel{width:100%;max-width:430px;max-height:80vh;overflow-y:auto;background:var(--cream);border-radius:22px 22px 0 0;padding:30px 28px 34px;transform:translateY(28px);transition:transform .28s cubic-bezier(.2,.8,.2,1);}
+.modal-overlay.open .modal-panel{transform:translateY(0);}
+.modal-handle{width:36px;height:4px;border-radius:2px;background:var(--bd2);margin:0 auto 20px;}
+.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px;}
+.modal-eyebrow{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:1.5px;color:var(--red);margin-bottom:8px;}
+.modal-title{font-size:21px;font-weight:900;color:var(--ink);line-height:1.32;word-break:keep-all;}
+.modal-close{flex-shrink:0;width:30px;height:30px;border-radius:50%;border:none;background:var(--bg2);color:var(--ink2);font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.modal-body{font-size:14.5px;color:var(--ink2);line-height:1.75;word-break:keep-all;}
+.modal-body b{color:var(--ink);font-weight:700;}
+.modal-body p+p{margin-top:12px;}
+.modal-foot{margin-top:18px;padding-top:14px;border-top:1px solid var(--bd);font-size:11.5px;color:var(--ink3);line-height:1.6;}
+.modal-body .mrow{display:flex;gap:8px;font-size:12.5px;color:var(--ink3);padding:6px 0;border-bottom:1px solid var(--bd);}
+.modal-body .mrow .d{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink4);min-width:66px;flex-shrink:0;}
+.modal-body .mrow.hl .c{color:var(--red);font-weight:700;}
+
+/* modal table & steps */
+.modal-body .mtable{width:100%;border-collapse:collapse;margin:14px 0;font-size:12.5px;}
+.modal-body .mtable th{background:var(--red);color:#fff;font-size:10.5px;font-weight:700;padding:8px 6px;text-align:center;}
+.modal-body .mtable th:first-child{text-align:left;padding-left:8px;}
+.modal-body .mtable td{padding:8px 6px;text-align:center;border-bottom:1px solid var(--bd);color:var(--ink2);}
+.modal-body .mtable td:first-child{text-align:left;font-weight:700;color:var(--ink);padding-left:8px;}
+.modal-body .mtable tr:last-child td{border-bottom:none;}
+.modal-body .mtable td.ok{color:var(--red);font-weight:800;}
+.modal-body .steps{display:flex;flex-direction:column;margin:14px 0 4px;}
+.modal-body .steps .step{display:flex;gap:12px;position:relative;padding-bottom:16px;}
+.modal-body .steps .step:last-child{padding-bottom:0;}
+.modal-body .steps .step:not(:last-child)::before{content:'';position:absolute;left:12px;top:26px;bottom:0;width:1px;background:var(--bd2);}
+.modal-body .steps .snum{width:25px;height:25px;border-radius:50%;background:var(--red);color:#fff;font-size:11.5px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:1;}
+.modal-body .steps .stxt{padding-top:2px;}
+.modal-body .steps .stxt .t{font-size:13.5px;font-weight:700;color:var(--ink);}
+.modal-body .steps .stxt .d{font-size:12px;color:var(--ink3);margin-top:2px;line-height:1.55;}
+.modal-body .cmp2{display:flex;gap:10px;margin:14px 0;}
+.modal-body .cmp2 .box{flex:1;background:var(--bg2);border-radius:12px;padding:13px 12px;border:1.5px solid var(--red);}
+.modal-body .cmp2 .box .g{font-size:10.5px;font-weight:800;color:var(--red);letter-spacing:1px;margin-bottom:9px;}
+.modal-body .cmp2 .box .range{font-size:12px;color:var(--ink2);margin-bottom:8px;line-height:1.5;}
+.modal-body .cmp2 .box .delta{font-size:16.5px;font-weight:800;color:var(--ink);}
+.modal-body .cmp2 .box .delta small{font-size:11px;font-weight:600;color:var(--ink3);display:block;margin-top:2px;}
+.modal-body .prio{margin:12px 0 4px;display:flex;flex-direction:column;gap:8px;}
+.modal-body .prio .row{display:flex;gap:10px;align-items:flex-start;background:var(--bg2);border-radius:10px;padding:10px 12px;}
+.modal-body .prio .rk{width:22px;height:22px;border-radius:50%;background:var(--red);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.modal-body .prio .rt b{color:var(--ink);font-weight:700;font-size:13px;}
+.modal-body .prio .rt div{font-size:12px;color:var(--ink3);margin-top:2px;line-height:1.5;}
+</style>
+
+<div class="viewer">
+
+<!-- CARD 01 · COVER -->
+<div class="card c01">
+  <div class="c01-body">
+    <div class="c01-rule"></div>
+    <div class="c01-hookwrap">
+      <p class="c01-hook">포기했던 암보장,<br>이제<br><span class="gold">다시 가능합니다</span></p>
+    </div>
+    <div class="c01-rule2"></div>
+    <div class="c01-eyebrow-row"><span>GUIDE</span><span>2026 · FAMILY EDITION</span></div>
+    <p class="c01-sub"><b style="color:#fff;font-weight:700;">이미 거절당한 경험이 있어도,</b> 암보장만큼은 다른 방법이 있을 수 있습니다. 특히 부모님 세대라면 — 온 가족이 모인 자리에서 <b style="color:#fff;font-weight:700;">암PASS플랜으로 함께 확인해보세요.</b></p>
+    <div class="c01-badge-row">
+      <span class="c01-badge" onclick="openModal('m9')">간편심사</span>
+      <span class="c01-badge" onclick="openModal('m10')">암보장 전용</span>
+      <span class="c01-badge solid" onclick="openModal('m11')">가족결합 할인</span>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 02 · 왜 거절되나 -->
+<div class="card" style="background:var(--cream);">
+  <div class="stitch" style="margin-top:75px;"></div>
+  <div class="issue-body">
+    <div class="idx">01</div>
+    <div class="pill">거절의 이유</div>
+    <h2 class="issue-title">지난 병력이 있어도<br>암보장은 확인해볼 수 있습니다</h2>
+    <p class="issue-p">입원, 수술, 정기 통원 이력이 있으면 일반 건강보험 심사에서는 거절되는 경우가 많습니다. 회복이 잘 되었어도 <b>이력 자체가 걸림돌</b>이 됩니다. 특히 부모님 세대는 뇌·심혈관 질환 이력으로 거절을 경험하신 경우가 적지 않습니다.</p>
+    <button class="detail-btn" onclick="openModal('m1')">자세히 보기<span class="plus">+</span></button>
+    <div class="tag-row">
+      <div class="tag-dot"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><line x1="1" y1="6" x2="10" y2="6" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round"/><polyline points="7,3 10,6 7,9" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+      <span class="tag-txt">심사 문턱을 낮춘 상품이 필요한 이유</span>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 03 · 암PASS 인수 구조 -->
+<div class="card" style="background:var(--cream);">
+  <div class="stitch"></div>
+  <div class="issue-body">
+    <div class="idx">02</div>
+    <div class="pill">암PASS 인수 원칙</div>
+    <h2 class="issue-title">암과 관련 없는 질병이면<br>암PASS 인수 가능</h2>
+    <p class="issue-p">보장 대상이 <b>암</b>이므로, 암과 무관한 질병 이력은 위험 평가에서 분리됩니다. 통상 건강보험 인수를 막는 뇌·심혈관 이력도 암보장 인수의 결격 사유가 되지 않는 경우가 있습니다.</p>
+    <div class="ilist">
+      <div class="row"><span class="mk">→</span><span class="tx"><b>뇌·심혈관 질환</b> 이력자도 확인 대상</span></div>
+      <div class="row"><span class="mk">→</span><span class="tx">건강검진 <b>재검 이력</b>, 정기 복약 이력도 확인 가능</span></div>
+      <div class="row"><span class="mk">→</span><span class="tx">인생대표 <b>간편심사(3.5.5 / 3.10.5)</b>로 확인</span></div>
+    </div>
+    <button class="detail-btn" onclick="openModal('m2')">자세히 보기<span class="plus">+</span></button>
+    <div class="tag-row">
+      <div class="tag-dot"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><line x1="1" y1="6" x2="10" y2="6" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round"/><polyline points="7,3 10,6 7,9" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+      <span class="tag-txt">정확한 기준은 약관·상품설명서 확인</span>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 04 · 인수사례 A -->
+<div class="card" style="background:var(--cream);">
+  <div class="stitch"></div>
+  <div class="issue-body">
+    <div class="idx">03</div>
+    <div class="pill gold">실제 인수사례 A</div>
+    <h2 class="issue-title">뇌동맥류 이력에도<br>인수 완료됐습니다</h2>
+    <p class="issue-p">고지 이력 <b>총 10건</b>, 그중 <b>수술만 5건</b>인 고객입니다. 가장 최근 이력은 청약 직전 시점의 <b>뇌동맥류(뇌혈관 이상)</b> 입원·통원 치료였습니다.</p>
+    <div class="stat3">
+      <div class="box"><div class="num">10<small>건</small></div><div class="lbl">전체 고지 이력</div></div>
+      <div class="box"><div class="num">3<small>건</small></div><div class="lbl">입원 이력</div></div>
+      <div class="box"><div class="num">5<small>건</small></div><div class="lbl">수술 이력</div></div>
+    </div>
+    <div class="case-hl">
+      <div class="lbl">심사 승인 사유</div>
+      <div class="tx">입원기간을 정확히 등록하고, <b>수술 필요소견·추가검사 소견이 없음</b>을 확인해 완치 고지 후 인수심사 승인되었습니다.</div>
+    </div>
+    <button class="detail-btn" onclick="openModal('m3')">자세히 보기<span class="plus">+</span></button>
+    <div class="tag-row">
+      <div class="tag-dot"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><line x1="1" y1="6" x2="10" y2="6" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round"/><polyline points="7,3 10,6 7,9" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+      <span class="tag-txt">인생대표 간편심사 3.5.5 · 인수완료</span>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 05 · 인수사례 B -->
+<div class="card" style="background:var(--cream);">
+  <div class="stitch"></div>
+  <div class="issue-body">
+    <div class="idx">04</div>
+    <div class="pill gold">실제 인수사례 B</div>
+    <h2 class="issue-title">스텐트 시술 중에도<br>인수 완료됐습니다</h2>
+    <p class="issue-p">고지 이력 <b>총 8건</b>. <b>협심증으로 스텐트 시술</b>을 받고 지금도 <b>정기검진 중</b>이며, <b>당뇨약을 계속 복용</b> 중인 고객입니다.</p>
+    <div class="stat3">
+      <div class="box"><div class="num">8<small>건</small></div><div class="lbl">전체 고지 이력</div></div>
+      <div class="box"><div class="num">진행중</div><div class="lbl">협심증 정기검진</div></div>
+      <div class="box"><div class="num">복약중</div><div class="lbl">당뇨 관리</div></div>
+    </div>
+    <div class="case-hl">
+      <div class="lbl">심사 승인 사유</div>
+      <div class="tx">협심증 정기검진 중인 상태에서 <b>입원·통원·수술 이력을 체크</b>한 뒤 완치 고지로 정리해 인수심사 승인되었습니다.</div>
+    </div>
+    <p class="issue-sub">"치료가 완전히 끝나야만 가입 가능하다"는 생각과 달리, 만성질환을 <b>현재 관리 중인 경우</b>도 확인 대상이 될 수 있습니다.</p>
+    <button class="detail-btn" onclick="openModal('m4')">자세히 보기<span class="plus">+</span></button>
+    <div class="tag-row">
+      <div class="tag-dot"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><line x1="1" y1="6" x2="10" y2="6" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round"/><polyline points="7,3 10,6 7,9" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+      <span class="tag-txt">인생대표 간편심사 3.10.5 · 인수완료</span>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 06 · 설계모델 ① 올인원 -->
+<div class="card" style="background:var(--cream);">
+  <div class="stitch"></div>
+  <div class="issue-body">
+    <div class="idx">05</div>
+    <div class="pill">설계모델 ①</div>
+    <h2 class="issue-title">암PASS 올인원 플랜<br>보장을 꽉 채우고 싶다면</h2>
+    <p class="issue-p">진단자금과 치료비를 모두 담는 <b>보장 최대화 모델</b>입니다. 통합암(전이포함) 진단 2천만원을 축으로 직접치료비·초기집중보장을 함께 구성합니다.</p>
+    <div class="feat-list">
+      <div class="row"><span class="k">통합암(전이포함)/통합소액암 진단</span><span class="v">2천/4백</span></div>
+      <div class="row"><span class="k">암직접치료/갑기 직접치료비</span><span class="v">1천/2백</span></div>
+      <div class="row"><span class="k">프리미엄암직접치료비</span><span class="v">1천</span></div>
+      <div class="row"><span class="k">초기집중보장프리미엄클래스Ⅱ</span><span class="v">1천/2백</span></div>
+    </div>
+    <table class="ptable">
+      <tr><th>구분</th><th>41세</th><th>50세</th><th>60세</th></tr>
+      <tr><td>여자</td><td>98,996</td><td>104,392</td><td class="hl">107,854</td></tr>
+      <tr><td>남자</td><td>128,038</td><td>162,394</td><td class="hl">215,688</td></tr>
+    </table>
+    <div class="tbl-note">인생대표 간편(3.10.5), 20년납 100세 만기, 주계약 300만 포함 기준 (원/월)</div>
+    <button class="detail-btn" onclick="openModal('m5')">자세히 보기<span class="plus">+</span></button>
+  </div>
+</div>
+
+<!-- CARD 07 · 설계모델 ② 가성비 -->
+<div class="card" style="background:var(--cream);">
+  <div class="stitch"></div>
+  <div class="issue-body">
+    <div class="idx">06</div>
+    <div class="pill">설계모델 ②</div>
+    <h2 class="issue-title">암PASS 가성비 인기플랜<br>보험료 부담을 낮추고 싶다면</h2>
+    <p class="issue-p">진단자금을 덜어내고 <b>실제 치료비 보장에 집중</b>한 모델입니다. 비급여 방사선치료·로봇수술·약물치료를 각각 넉넉하게 보장합니다.</p>
+    <div class="stat3">
+      <div class="box"><div class="num">3,000<small>만</small></div><div class="lbl">비급여 방사선치료<br>(연간)</div></div>
+      <div class="box"><div class="num">3,000<small>만</small></div><div class="lbl">암 로봇수술<br>(연간)</div></div>
+      <div class="box"><div class="num">3,000<small>만</small></div><div class="lbl">비급여 약물치료<br>(연간)</div></div>
+    </div>
+    <table class="ptable">
+      <tr><th>구분</th><th>41세</th><th>50세</th><th>60세</th></tr>
+      <tr><td>여자</td><td class="hl">44,088</td><td>45,344</td><td>46,418</td></tr>
+      <tr><td>남자</td><td>55,190</td><td>69,732</td><td>93,414</td></tr>
+    </table>
+    <div class="tbl-note">인생대표, 간편 3.10.5, 20년납 100세 만기, 주보험 300만 포함 기준 (원/월)</div>
+    <div class="top3" style="margin-top:16px;">
+      <div style="font-size:12px;font-weight:700;color:var(--ink3);margin-bottom:2px;">실제 부가율 TOP 3</div>
+      <div class="row"><div class="rank">1</div><div class="name">초기집중보장형 프리미엄클래스암주요치료</div><div class="pct">62%</div></div>
+      <div class="row"><div class="rank">2</div><div class="name">암직접치료비</div><div class="pct">56%</div></div>
+      <div class="row"><div class="rank">3</div><div class="name">프리미엄클래스암특정치료비</div><div class="pct">49%</div></div>
+    </div>
+    <button class="detail-btn" onclick="openModal('m6')">자세히 보기<span class="plus">+</span></button>
+  </div>
+</div>
+
+<!-- CARD 08 · 비교분석 -->
+<div class="card" style="background:var(--cream);">
+  <div class="stitch"></div>
+  <div class="issue-body">
+    <div class="idx">07</div>
+    <div class="pill">두 모델 비교</div>
+    <div class="big"><span class="n">55~57</span><span class="u">% 절감</span></div>
+    <h2 class="issue-title">가성비 플랜은<br>전 구간에서 절반 수준</h2>
+    <p class="issue-p">올인원 대비 가성비 플랜의 보험료 절감률은 <b>전 연령·성별 구간에서 55~57%로 균일</b>합니다. 특정 연령대만 유리한 것이 아니라, <b>누구에게나 "절반 가격"</b>이라는 뜻입니다.</p>
+    <div class="ilist">
+      <div class="row"><span class="mk">♀</span><span class="tx">여성이시라면 41→60세 보험료 상승폭이 <b>8.9%(가성비 5.3%)</b>에 불과 — 연령보다 <b>보장 폭 선택</b>이 중요합니다</span></div>
+      <div class="row"><span class="mk">♂</span><span class="tx">남성이시라면 41→60세 상승폭이 <b>68.5%(가성비 69.3%)</b> — 지금 <b>가입 시점 자체</b>가 절감 포인트입니다</span></div>
+    </div>
+    <button class="detail-btn" onclick="openModal('m7')">자세히 보기<span class="plus">+</span></button>
+  </div>
+</div>
+
+<!-- CARD 09 · 가족결합 할인 (통합) -->
+<div class="card" style="background:var(--cream);">
+  <div class="stitch"></div>
+  <div class="issue-body">
+    <div class="idx">08</div>
+    <div class="pill gold">가족결합 할인</div>
+    <h2 class="issue-title">월 4만원 이상 가입하면<br><span style="color:var(--gold);">보험료 5% 할인</span></h2>
+    <p class="issue-p">월 보험료 <b>4만원 이상</b> 가입 시 가족결합 할인이 적용되는 <b>인생/청춘대표 건강보험</b>의 암PASS플랜입니다. 가성비 인기플랜의 <b>최저 보험료가 44,088원</b>이라, 전 연령·성별 구간에서 결합 요건이 <b>추가 부담 없이</b> 충족됩니다.</p>
+
+    <div class="stat3">
+      <div class="box">
+        <div class="num">2<small>인↑</small></div>
+        <div class="lbl">가족결합 최소 인원</div>
+      </div>
+      <div class="box">
+        <div class="num">4<small>만원↑</small></div>
+        <div class="lbl">1인당 최소 월보험료</div>
+      </div>
+      <div class="box" style="background:var(--red);border-color:var(--red);">
+        <div class="num" style="color:#fff;">5<small>%</small></div>
+        <div class="lbl" style="color:rgba(255,255,255,.8);">가족결합할인특약 할인율</div>
+      </div>
+    </div>
+
+    <table class="ptable">
+      <tr><th>가족 구성</th><th>제안 모델</th><th>월 보험료</th></tr>
+      <tr><td>아버지 (60세 남)</td><td>가성비</td><td class="hl">93,414</td></tr>
+      <tr><td>어머니 (60세 여)</td><td>가성비</td><td class="hl">46,418</td></tr>
+      <tr><td>본인 (41세 남)</td><td>가성비</td><td class="hl">55,190</td></tr>
+    </table>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;padding:12px 14px;background:var(--bg2);border-radius:10px;">
+      <span style="font-size:13px;color:var(--ink3);">3인 합계 (결합 전)</span>
+      <span style="font-size:16px;font-weight:700;color:var(--ink3);text-decoration:line-through;">195,022원</span>
+    </div>
+    <div class="case-hl" style="margin-top:6px;margin-bottom:6px;">
+      <div class="lbl">가족결합할인 <b style="color:var(--gold2);font-size:13px;">5%</b> 적용 시</div>
+      <div class="tx" style="font-size:18px;font-weight:800;">약 185,271원</div>
+    </div>
+    <p class="issue-sub">전원 가성비 플랜으로 통일하면 <b>보장을 늘리지 않아도</b> 3인 모두 결합 요건이 성립합니다.</p>
+
+    <div class="tag-row">
+      <div class="tag-dot"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><line x1="1" y1="6" x2="10" y2="6" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round"/><polyline points="7,3 10,6 7,9" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+      <span class="tag-txt">추석 등 가족이 모이는 때 함께 준비해보세요</span>
+    </div>
+
+    <div style="width:100%;height:1px;background:var(--bd);margin:26px 0 22px;"></div>
+
+    <div class="pill" style="margin-bottom:16px;">가족이 더 많다면</div>
+    <h3 style="font-size:20px;font-weight:900;color:var(--ink);line-height:1.3;letter-spacing:-.5px;word-break:keep-all;margin-bottom:12px;">4인 가족이면<br>할인 폭도 더 커집니다</h3>
+    <p class="issue-p" style="font-size:14.5px;">피보험자 기준 <b>2인 이상</b>이 각자 <b>월 4만원 이상</b> 가입하면 신청할 수 있고, 가족 중 납입면제 사유가 발생하면 <b>5%가 추가</b>되어 최대 <b>10%</b>까지 할인됩니다. 실제 4인 가족 예시로 보면 이렇습니다.</p>
+
+    <div class="feat-list">
+      <div class="row"><span class="k">건강관리 필요한 아빠 (60세 남·간편고지 3.5.5)</span><span class="v">202,610</span></div>
+      <div class="row"><span class="k">건강한 엄마 (55세 여·일반고지)</span><span class="v">81,966</span></div>
+      <div class="row"><span class="k">더 건강한 아들 (30세 남·건강고지 10년)</span><span class="v">54,438</span></div>
+      <div class="row"><span class="k">건강한 이모 (57세 여·일반고지)</span><span class="v">83,546</span></div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;padding:12px 14px;background:var(--bg2);border-radius:10px;">
+      <span style="font-size:13px;color:var(--ink3);">4인 가족 합계 (결합 전)</span>
+      <span style="font-size:16px;font-weight:700;color:var(--ink3);text-decoration:line-through;">422,560원</span>
+    </div>
+    <div class="case-hl" style="margin-top:6px;margin-bottom:6px;">
+      <div class="lbl">가족결합할인 5% 적용 시</div>
+      <div class="tx" style="font-size:18px;font-weight:800;">월 401,433원<br><span style="font-size:13px;font-weight:400;opacity:.85;">— 4인 총 납입보험료 기준 약 505만원 할인</span></div>
+    </div>
+    <div class="issue-sub">예시: 가입 1년 시점 엄마가 암 진단으로 <b>보험료 납입면제</b>(잔여 납입보험료 1,775만원 면제)를 받으면, 남은 3인은 <b>10% 할인</b>이 적용되어 월 306,534원(3인 총 납입보험료 기준 약 795만원 할인)이 됩니다.</div>
+
+    <div class="ilist" style="margin-top:18px;">
+      <div class="row"><span class="mk">→</span><span class="tx">가족 범위: <b>배우자, 직계존비속 또는 형제·자매</b></span></div>
+      <div class="row"><span class="mk">→</span><span class="tx">필요 서류: <b>가족관계증명서, 주민등록등본</b> 등</span></div>
+      <div class="row"><span class="mk">!</span><span class="tx">모든 계약이 유지 중이어야 할인이 적용됩니다</span></div>
+    </div>
+
+    <button class="detail-btn" onclick="openModal('m8')">자세히 보기<span class="plus">+</span></button>
+    <div class="mini-note">위 4인 예시는 삼성 가족대표건강보험(무배당,무해약환급금형) 기준이며, 사망시적립액미지급형·월납/20년납·종신/20년납 등 특정 가입금액 조건의 예시입니다. 가족결합할인제도 자체는 대상상품이 향후 신규 출시·개정 시 추가될 수 있어, 인생/청춘대표 건강보험 적용 시에는 해당 시점 상품설명서로 재확인하세요.</div>
+  </div>
+</div>
+
+<!-- CARD 10 · 셀프체크 -->
+<div class="card" style="background:var(--cream);">
+  <div class="chk-wrap">
+    <div class="chk-box">
+      <div class="pill" style="margin-bottom:20px;">셀프 체크</div>
+      <h2 style="font-size:34px;font-weight:900;color:var(--ink);line-height:1.1;letter-spacing:-1.5px;word-break:keep-all;margin-bottom:8px;">우리 가족<br>해당되나요?</h2>
+      <div style="height:3px;background:var(--gold2);width:48px;margin:18px 0 20px;"></div>
+
+      <div class="chk-item">
+        <div class="chk-box-icon"></div>
+        <div><div class="chk-title">부모님이 최근 5년 내 입원·수술 이력이 있다</div><div class="chk-sub">최근 병력이 있으면 일반심사 통과가 어려울 수 있어요</div></div>
+      </div>
+      <div class="chk-item">
+        <div class="chk-box-icon"></div>
+        <div><div class="chk-title">만성질환으로 정기 통원·약 복용 중이다</div><div class="chk-sub">치료가 진행 중이어도 확인해볼 수 있는 상품이 있어요</div></div>
+      </div>
+      <div class="chk-item">
+        <div class="chk-box-icon"></div>
+        <div><div class="chk-title">기존 건강보험 심사에서 거절된 적 있다</div><div class="chk-sub">거절 이력이 있어도 다른 상품은 가능할 수 있어요</div></div>
+      </div>
+      <div class="chk-item">
+        <div class="chk-box-icon"></div>
+        <div><div class="chk-title">온 가족 암보장을 아직 준비하지 못했다</div><div class="chk-sub">3세대가 함께 모인 지금이 기회예요</div></div>
+      </div>
+
+      <div style="padding:20px 0 0;">
+        <div style="font-size:16px;font-weight:700;color:var(--ink);margin-bottom:6px;">하나라도 해당되면</div>
+        <div style="display:flex;align-items:center;margin-bottom:6px;"><div style="flex:1;height:1px;background:var(--gold);"></div><div style="width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:8px solid var(--gold);"></div></div>
+        <div style="font-size:16px;font-weight:500;color:var(--red);">이번 명절, 가족 이력부터 확인하세요</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 11 · FAQ -->
+<div class="card" style="background:var(--cream);">
+  <div class="stitch"></div>
+  <div class="issue-body">
+    <div class="idx">09</div>
+    <div class="pill">자주 묻는 질문</div>
+    <h2 class="issue-title" style="margin-bottom:8px;">상담 전에<br>이것부터 확인하세요</h2>
+    <div style="margin-top:8px;">
+      <div class="faq-item">
+        <div class="faq-q"><span class="qmark">Q</span><span>스텐트도 넣었는데 될 리가 없어요.</span></div>
+        <div class="faq-a"><span class="amark">A</span><span>협심증으로 스텐트 시술을 받고 지금도 정기검진 중이신 분도 <b>인수 완료된 사례</b>가 있습니다. 암PASS는 암과 관련 없는 질병이면 인수를 검토해볼 수 있는 구조입니다.</span></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="qmark">Q</span><span>병원 다닌 게 열 번은 넘어요.</span></div>
+        <div class="faq-a"><span class="amark">A</span><span>고지 이력 10건, 그중 수술만 5건이신 분도 인수되셨습니다. <b>건수가 아니라 각 이력의 소견 상태</b>가 기준입니다. 이력부터 함께 정리해보시죠.</span></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="qmark">Q</span><span>가족까지 하려면 보험료를 올려야 하나요?</span></div>
+        <div class="faq-a"><span class="amark">A</span><span>아닙니다. 가성비 플랜은 가장 낮은 구간도 <b>44,088원</b>으로 이미 결합 기준(4만원)을 넘습니다. 보장을 늘리지 않아도 결합 요건은 성립합니다.</span></div>
+      </div>
+    </div>
+    <div class="mini-note">위 답변은 실제 인수사례를 바탕으로 한 안내이며, 가입을 확정 짓는 것은 아닙니다. 인수 여부는 개별 심사 결과에 따라 달라집니다.</div>
+  </div>
+</div>
+
+<!-- CARD 12 · CTA -->
+<div class="card" style="background:var(--red2);">
+  <div class="c08-body">
+    <div class="c08-eyebrow">CONSULTING FOR YOU</div>
+    <h2 class="c08-headline">혼자<br>고민하지<br>마세요.</h2>
+    <p class="c08-sub">
+      보험 + 세무 + 법인 전략을<br>
+      <strong>한 번에 설계합니다.</strong><span style="display:block;margin-top:10px;"></span>
+      법인 · 개인사업자 · 개인<br>
+      <strong>각각의 상황에 맞는 맞춤 컨설팅</strong>을<br>
+      제공합니다.<span style="display:block;margin-top:10px;"></span>
+      <strong>박기범 전문위원이 함께합니다.</strong>
+    </p>
+
+    <div style="margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.5px;margin-bottom:10px;">파트너사</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
+        <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;">
+          <div style="font-size:20px;">⚖️</div><div style="font-size:10px;color:rgba(255,255,255,.55);">세무법인</div><div style="font-size:12px;font-weight:700;color:#fff;">세무사 협업</div>
+        </div>
+        <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;">
+          <div style="font-size:20px;">📊</div><div style="font-size:10px;color:rgba(255,255,255,.55);">회계법인</div><div style="font-size:12px;font-weight:700;color:#fff;">회계사 협업</div>
+        </div>
+        <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;">
+          <div style="font-size:20px;">💡</div><div style="font-size:10px;color:rgba(255,255,255,.55);">특허법인</div><div style="font-size:12px;font-weight:700;color:#fff;">변리사 협업</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:8px;">
+      <a href="tel:01091738141" class="btn">
+        <div class="btn-dot"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><line x1="1" y1="6" x2="10" y2="6" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round"/><polyline points="7,3 10,6 7,9" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+        <div class="btn-label">전화 상담</div><div class="btn-meta">평일 09:00~18:00</div>
+      </a>
+      <a href="https://pf.kakao.com/_SxjFxdn/posts" class="btn">
+        <div class="btn-dot"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><line x1="1" y1="6" x2="10" y2="6" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round"/><polyline points="7,3 10,6 7,9" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+        <div class="btn-label">카카오 채널</div><div class="btn-meta">법인비즈 디자인유어웰스</div>
+      </a>
+      <a href="https://blog.naver.com/bizinsightkorea" class="btn">
+        <div class="btn-dot"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><line x1="1" y1="6" x2="10" y2="6" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round"/><polyline points="7,3 10,6 7,9" stroke="#2E7D6B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+        <div class="btn-label">네이버 블로그</div><div class="btn-meta">비즈인사이트 bizinsight</div>
+      </a>
+    </div>
+  </div>
+  <div class="c08-footer">
+    <p>서울시 강남구 테헤란로 4길 삼성생명금융서비스<br>법인 전문 컨설팅 박기범 전문위원</p>
+    <div class="c08-disclaimer">본 내용은 일반적인 안내이며 특정 상품의 가입 가능 여부·보장내용·보험료를 보장하지 않습니다. 가입 가능 여부는 개별 심사 결과에 따르며, 정확한 내용은 상담 및 약관·상품설명서를 통해 확인하시기 바랍니다. 가족결합 할인의 적용 요건·할인율·대상 범위는 최신 시행 기준에 따릅니다.</div>
+  </div>
+</div>
+
+</div>
+
+<!-- MODAL 1 -->
+<div class="modal-overlay" id="m1" onclick="if(event.target===this)closeModal('m1')">
+  <div class="modal-panel">
+    <div class="modal-handle"></div>
+    <div class="modal-head">
+      <div><div class="modal-eyebrow">DETAIL · 01</div><div class="modal-title">왜 거절이 될까요?</div></div>
+      <button class="modal-close" onclick="closeModal('m1')" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>보험사는 가입 심사(언더라이팅)에서 최근 치료 이력, 입원·수술 여부, 지속 치료 여부 등을 종합적으로 평가합니다. 완치 판정을 받았더라도 <b>재발·추가 치료 가능성을 보수적으로 판단</b>해, 이력만으로 거절되는 경우가 많습니다.</p>
+
+      <div class="cmp2">
+        <div class="box">
+          <div class="g">일반 건강보험</div>
+          <div class="range">질병 이력 전반을 폭넓게 평가</div>
+          <div class="delta" style="font-size:13px;">이력만으로<br><small>거절되기 쉬움</small></div>
+        </div>
+        <div class="box">
+          <div class="g">암 전용 간편심사</div>
+          <div class="range">암과 무관한 이력은 분리해 평가</div>
+          <div class="delta" style="font-size:13px;">뇌·심혈관 이력도<br><small>검토 대상</small></div>
+        </div>
+      </div>
+
+      <div class="case-hl">
+        <div class="lbl">알아두세요</div>
+        <div class="tx">심사 기준은 <b>보험사·상품마다 다릅니다.</b> 한 곳에서 거절되었다고 모든 곳에서 거절되는 것은 아닙니다.</div>
+      </div>
+    </div>
+    <div class="modal-foot">정확한 인수 가능 여부는 개별 심사 결과에 따라 달라집니다.</div>
+  </div>
+</div>
+
+<!-- MODAL 2 -->
+<div class="modal-overlay" id="m2" onclick="if(event.target===this)closeModal('m2')">
+  <div class="modal-panel">
+    <div class="modal-handle"></div>
+    <div class="modal-head">
+      <div><div class="modal-eyebrow">DETAIL · 02</div><div class="modal-title">암PASS 인수 기준, 더 자세히</div></div>
+      <button class="modal-close" onclick="closeModal('m2')" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>암PASS플랜은 <b>암과 관련 없는 질병 이력이면 인수를 검토</b>할 수 있는 구조입니다.</p>
+
+      <div class="ilist">
+        <div class="row"><span class="mk">→</span><span class="tx">뇌혈관: <b>뇌출혈·뇌경색·동맥협착</b> 등 이력</span></div>
+        <div class="row"><span class="mk">→</span><span class="tx">심혈관: <b>심근경색·협심증·부정맥</b> 등 이력</span></div>
+      </div>
+
+      <table class="mtable">
+        <tr><th>코드</th><th>검토 가능 이력</th></tr>
+        <tr><td>Q</td><td>선천기형·염색체이상</td></tr>
+        <tr><td>R</td><td>상세불명 이상소견<br><small style="font-weight:400;color:var(--ink3);">(건강검진 재검 등)</small></td></tr>
+        <tr><td>F</td><td>정신 및 행동장애<br><small style="font-weight:400;color:var(--ink3);">(수면제·항불안제 복용 등)</small></td></tr>
+        <tr><td>S·T</td><td>단일·다발성 신체손상</td></tr>
+      </table>
+
+      <p style="margin-top:14px;">"3.5.5형", "3.10.5형"이라는 숫자는 <b>몇 년치 병력까지 확인하는지</b>를 나타내는 심사 유형 이름입니다. 풀어보면 이렇습니다.</p>
+
+      <table class="mtable">
+        <tr><th>확인 항목</th><th>3.5.5형</th><th>3.10.5형</th></tr>
+        <tr><td>입원·수술·추가검사<br>필요소견 여부</td><td>최근 3개월</td><td>최근 3개월</td></tr>
+        <tr><td>입원·수술·장기치료<br>(7일↑입원 · 30일↑투약)</td><td>최근 5년</td><td>최근 10년</td></tr>
+        <tr><td>암 진단·입원·수술·<br>항암치료 이력</td><td>최근 5년</td><td>최근 5년</td></tr>
+      </table>
+      <div class="tbl-note">※ 일반적인 간편고지 확인 항목 기준이며, 상품에 따라 문항이 다를 수 있어 정확한 내용은 청약서·상품설명서로 확인이 필요합니다.</div>
+
+      <div class="case-hl">
+        <div class="lbl">확인 방식</div>
+        <div class="tx">두 유형은 <b>3개월·5년 확인 기준은 같고</b>, 입원·수술 이력을 5년까지 보는지 10년까지 보는지만 다릅니다. 고객님의 이력에 맞는 유형으로 확인해 드립니다.</div>
+      </div>
+    </div>
+    <div class="modal-foot">상품별 세부 기준은 가입 전 상담과 약관·상품설명서 확인이 필요합니다.</div>
+  </div>
+</div>
+
+<!-- MODAL 3 -->
+<div class="modal-overlay" id="m3" onclick="if(event.target===this)closeModal('m3')">
+  <div class="modal-panel">
+    <div class="modal-handle"></div>
+    <div class="modal-head">
+      <div><div class="modal-eyebrow">DETAIL · 03</div><div class="modal-title">인수사례 A, 이렇게 읽어야 합니다</div></div>
+      <button class="modal-close" onclick="closeModal('m3')" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>고지 이력 10건, 그중 수술 5건이면 통상의 감각으로는 인수가 어려워 보이는 구성이지만 인수가 완료됐습니다. <b>이렇게 읽으시면 됩니다.</b></p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="snum">1</div>
+          <div class="stxt"><div class="t">건수는 변수가 아닙니다</div><div class="d">건수가 아니라 <b>각 이력의 소견 상태</b>가 기준입니다.</div></div>
+        </div>
+        <div class="step">
+          <div class="snum">2</div>
+          <div class="stxt"><div class="t">최근 이력도 통과됩니다</div><div class="d">청약 직전 시점의 이력이라도 수술 필요소견·추가검사 소견이 없다면 완치 고지로 정리될 수 있습니다.</div></div>
+        </div>
+        <div class="step">
+          <div class="snum">3</div>
+          <div class="stxt"><div class="t">승인은 서류가 만듭니다</div><div class="d">입원기간 등록 → 소견 부존재 확인 → 완치 고지, 이 세 단계가 승인의 실체입니다.</div></div>
+        </div>
+      </div>
+
+      <div class="case-hl">
+        <div class="lbl">미리 확인해두세요</div>
+        <div class="tx">청약 전 진료기록·소견서로 <b>"수술 필요소견 없음 / 추가검사 소견 없음"</b>을 미리 확인해두시면, 고지를 준비하실 때 도움이 됩니다.</div>
+      </div>
+    </div>
+    <div class="modal-foot">개별 심사 결과이며 동일 조건에서 동일 결과를 보장하지 않습니다. 고지는 반드시 사실에 근거해야 합니다.</div>
+  </div>
+</div>
+
+<!-- MODAL 4 -->
+<div class="modal-overlay" id="m4" onclick="if(event.target===this)closeModal('m4')">
+  <div class="modal-panel">
+    <div class="modal-handle"></div>
+    <div class="modal-head">
+      <div><div class="modal-eyebrow">DETAIL · 04</div><div class="modal-title">인수사례 B, 추적관찰 중에도 인수됩니다</div></div>
+      <button class="modal-close" onclick="closeModal('m4')" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>협심증 정기검진이 진행 중이고 당뇨 약복용도 지속 중인 상태에서 인수되었습니다. <b>"치료가 완전히 끝나야 가입 가능하다"는 통념은 사실이 아니며</b>, 현재 만성질환을 관리 중인 고객도 상담 대상입니다.</p>
+
+      <table class="mtable">
+        <tr><th>비교 항목</th><th>사례 A<br>뇌동맥류</th><th>사례 B<br>협심증 스텐트</th></tr>
+        <tr><td>심사 유형</td><td>간편 3.5.5</td><td>간편 3.10.5</td></tr>
+        <tr><td>고지 건수</td><td>10건</td><td>8건</td></tr>
+        <tr><td>핵심 리스크</td><td>뇌혈관·입원</td><td>심혈관·시술+당뇨약복용</td></tr>
+        <tr><td>치료 상태</td><td>치료 종결</td><td>정기검진 지속 중</td></tr>
+        <tr><td>인수 결과</td><td class="ok">완치고지→인수완료</td><td class="ok">완치고지→인수완료</td></tr>
+      </table>
+
+      <p style="margin-top:4px;">뇌혈관이든 심혈관이든, 진단명보다 <b>현재 상태와 소견</b>이 심사의 중심입니다. 두 사례 모두 다음과 같은 <b>동일한 경로</b>를 밟았습니다.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="snum">1</div>
+          <div class="stxt"><div class="t">이력 전수 체크</div><div class="d">입원·통원·수술 이력을 연도순으로 빠짐없이 확인</div></div>
+        </div>
+        <div class="step">
+          <div class="snum">2</div>
+          <div class="stxt"><div class="t">소견 부존재 확인</div><div class="d">수술 필요소견·추가검사 소견이 없는지 서류로 확인</div></div>
+        </div>
+        <div class="step">
+          <div class="snum">3</div>
+          <div class="stxt"><div class="t">완치 고지</div><div class="d">확인된 사실에 근거해 완치로 고지 정리</div></div>
+        </div>
+        <div class="step">
+          <div class="snum">4</div>
+          <div class="stxt"><div class="t">인수심사 승인</div><div class="d">심사 결과에 따라 최종 인수 여부 확정</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-foot">개별 심사 결과이며 동일 조건에서 동일 결과를 보장하지 않습니다. "인수를 보장한다"는 의미가 아닙니다.</div>
+  </div>
+</div>
+
+<!-- MODAL 5 -->
+<div class="modal-overlay" id="m5" onclick="if(event.target===this)closeModal('m5')">
+  <div class="modal-panel">
+    <div class="modal-handle"></div>
+    <div class="modal-head">
+      <div><div class="modal-eyebrow">DETAIL · 05</div><div class="modal-title">올인원 플랜, 나에게도 맞을까요</div></div>
+      <button class="modal-close" onclick="closeModal('m5')" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>같은 올인원 플랜이라도 <b>성별에 따라 연령 부담이 크게 갈립니다.</b> 41세→60세 19년간의 보험료 변화를 비교하면 다음과 같습니다.</p>
+
+      <div class="cmp2">
+        <div class="box">
+          <div class="g">FEMALE</div>
+          <div class="range">41세 98,996원<br>→ 60세 107,854원</div>
+          <div class="delta">+8,858원<small>19년간 8.9% 상승 — 연령 부담 적음</small></div>
+        </div>
+        <div class="box">
+          <div class="g">MALE</div>
+          <div class="range">41세 128,038원<br>→ 60세 215,688원</div>
+          <div class="delta">+87,650원<small>19년간 68.5% 상승 — 연령 민감도 큼</small></div>
+        </div>
+      </div>
+
+      <p>여성이시라면 고연령에도 올인원 플랜을 그대로 유지하기에 부담이 적지만, 남성이시라면 60세 기준 월 21만원대까지 오르는 만큼 <b>가성비 플랜도 함께 비교해보시는 것</b>이 좋습니다.</p>
+
+      <div class="prio">
+        <div class="row"><div class="rk">1</div><div class="rt"><b>40~50대 여성이시라면</b><div>올인원 플랜만으로도 충분합니다</div></div></div>
+        <div class="row"><div class="rk">2</div><div class="rt"><b>40대 남성이시라면</b><div>올인원을 우선 고려하시되, 가성비 플랜도 함께 확인해보세요</div></div></div>
+        <div class="row"><div class="rk">3</div><div class="rt"><b>50~60대 남성이시라면</b><div>가성비 플랜을 우선 고려하시고, 올인원은 보장을 더 늘리고 싶을 때 선택하시면 됩니다</div></div></div>
+      </div>
+    </div>
+    <div class="modal-foot">보험료는 안내 기준 예시이며 실제 계약 조건·심사 결과에 따라 달라집니다.</div>
+  </div>
+</div>
+
+<!-- MODAL 6 -->
+<div class="modal-overlay" id="m6" onclick="if(event.target===this)closeModal('m6')">
+  <div class="modal-panel">
+    <div class="modal-handle"></div>
+    <div class="modal-head">
+      <div><div class="modal-eyebrow">DETAIL · 06</div><div class="modal-title">가성비 인기플랜 구성</div></div>
+      <button class="modal-close" onclick="closeModal('m6')" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>진단자금 규모는 줄이고, <b>실제 치료 단계의 보장</b>에 집중해 구성한 특약입니다.</p>
+
+      <table class="mtable">
+        <tr><th>특약명</th><th>가입금액</th></tr>
+        <tr><td>초기집중보장형 프리미엄클래스Ⅱ<br>암주요치료 / 갑기주요치료</td><td>1천/2백만원</td></tr>
+        <tr><td>프리미엄클래스암특정치료비<br>(갑·기 동일보장)</td><td>1천만원</td></tr>
+        <tr><td>암직접치료 / 갑기 직접치료비</td><td>1천/2백만원</td></tr>
+      </table>
+
+      <div class="case-hl">
+        <div class="lbl">설계 포인트</div>
+        <div class="tx">진단자금은 줄여도, 비급여 방사선치료·로봇수술·약물치료는 각 연 <b>3,000만원</b>까지 그대로 보장됩니다. <b>실제 치료 단계에서 체감하는 보장력</b>은 유지하면서 보험료만 낮춘 구조입니다.</div>
+      </div>
+    </div>
+    <div class="modal-foot">부가율은 실제 계약 부가 비중 참고치이며, 개별 고객의 필요 보장과는 별개로 판단해야 합니다.</div>
+  </div>
+</div>
+
+<!-- MODAL 7 -->
+<div class="modal-overlay" id="m7" onclick="if(event.target===this)closeModal('m7')">
+  <div class="modal-panel">
+    <div class="modal-handle"></div>
+    <div class="modal-head">
+      <div><div class="modal-eyebrow">DETAIL · 07</div><div class="modal-title">나에게 맞는 플랜은?</div></div>
+      <button class="modal-close" onclick="closeModal('m7')" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>여성과 남성은 <b>연령에 따라 보험료가 오르는 정도가 다릅니다.</b> 그래서 무엇을 먼저 고려하면 좋을지도 아래처럼 달라집니다.</p>
+
+      <table class="mtable">
+        <tr><th>구분</th><th>여성</th><th>남성</th></tr>
+        <tr><td>먼저 볼 것</td><td>어떤 보장까지<br>준비할지</td><td>언제<br>가입할지</td></tr>
+        <tr><td>이유<br>(보험료 상승률)</td><td>연령별 차이 미미<br>(8.9%)</td><td>연령 상승 시 급증<br>(68.5%)</td></tr>
+        <tr><td>제안 플랜</td><td>올인원·가성비<br>플랜 제안</td><td>50대↑는<br>가성비 플랜 제안</td></tr>
+      </table>
+      <div class="tbl-note">※ 8.9%·68.5%는 올인원 플랜의 41세→60세, 19년간 보험료 상승률입니다.</div>
+
+      <div class="case-hl">
+        <div class="lbl">준비 포인트</div>
+        <div class="tx"><b>여성이시라면</b> 연령별 보험료 차이가 크지 않으니, 보장 폭부터 편하게 비교해 보고 올인원과 가성비 중 필요한 플랜을 선택하시면 됩니다.<br><b>남성이시라면</b> 연령이 오를수록 보험료가 빠르게 오르는 만큼, 지금 가입을 결정하시는 것 자체가 곧 보험료를 아끼는 길입니다.</div>
+      </div>
+    </div>
+    <div class="modal-foot">차액·절감률·상승폭은 06·07카드의 제안 보험료로 산출한 수치입니다.</div>
+  </div>
+</div>
+
+<!-- MODAL 8 -->
+<div class="modal-overlay" id="m8" onclick="if(event.target===this)closeModal('m8')">
+  <div class="modal-panel">
+    <div class="modal-handle"></div>
+    <div class="modal-head">
+      <div><div class="modal-eyebrow">DETAIL · 08</div><div class="modal-title">가족결합 할인, 자세히 알아보기</div></div>
+      <button class="modal-close" onclick="closeModal('m8')" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>가족이 함께 모이는 시점을 활용하면 좋습니다. 명절처럼 온 가족이 한 자리에 모일 때라면 더 수월합니다.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="snum">1</div>
+          <div class="stxt"><div class="t">온 가족이 한 자리에 있습니다</div><div class="d">보통은 부모님, 본인, 형제자매가 각자 따로 가입을 챙겨야 하지만, 명절에는 온 가족이 한 공간에 모이는 흔치 않은 시점입니다. 이런 기회에 가족결합을 함께 준비해보세요.</div></div>
+        </div>
+        <div class="step">
+          <div class="snum">2</div>
+          <div class="stxt"><div class="t">자연스럽게 건강 이야기를 나눌 수 있습니다</div><div class="d">명절에는 부모님의 병원 이력을 자연스럽게 듣게 되는 경우가 많습니다. 이런 대화가 암PASS 가입 가능 여부를 가늠해보는 좋은 출발점이 됩니다.</div></div>
+        </div>
+        <div class="step">
+          <div class="snum">3</div>
+          <div class="stxt"><div class="t">가입 결정과 납입까지 한 번에 가능합니다</div><div class="d">부모님 보험료를 자녀가 대신 납입하는 경우가 많은데, 온 가족이 모인 지금이라면 가입을 결정하실 분과 납입하실 분이 함께 상의해 바로 준비하실 수 있습니다.</div></div>
+        </div>
+      </div>
+
+      <div class="case-hl">
+        <div class="lbl">가족결합할인제도 구조</div>
+        <div class="tx">피보험자 기준 배우자·직계존비속·형제자매 등 <b>2인 이상</b>이 각자 월 4만원 이상 가입하고 신청·승인되면 <b>월 보험료의 5%</b>를 할인합니다. 가족 중 주계약이 납입면제 사유로 면제되면 5%가 추가되어 <b>최대 10%</b>까지 할인됩니다.</div>
+      </div>
+
+      <p style="margin-top:20px;font-weight:700;color:var(--ink);">4인 가족 예시, 보장별 상세 내역</p>
+      <div class="tbl-note">← 좌우로 밀어 4명 전체 내역을 확인하세요</div>
+      <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 4px;">
+        <table class="mtable" style="min-width:540px;margin:0;">
+          <tr><th>보장명</th><th>가입<br>금액</th><th>아빠<br>60세·남</th><th>엄마<br>55세·여</th><th>아들<br>30세·남</th><th>이모<br>57세·여</th></tr>
+          <tr><td>주계약</td><td>300만</td><td>11,160</td><td>6,660</td><td>3,690</td><td>7,080</td></tr>
+          <tr><td>통합암(전이포함)진단</td><td>1,000만</td><td>67,630</td><td>21,810</td><td>16,960</td><td>22,180</td></tr>
+          <tr><td>통합소액암진단</td><td>200만</td><td>1,356</td><td>1,338</td><td>666</td><td>1,296</td></tr>
+          <tr><td>종합병원이상직접<br>치료비보장(연1회)Ⅱ</td><td>1,000만</td><td>79,340</td><td>32,590</td><td>20,690</td><td>32,690</td></tr>
+          <tr><td>종합병원이상소액암<br>직접치료보장(연1회)Ⅱ</td><td>200만</td><td>2,034</td><td>1,628</td><td>872</td><td>1,600</td></tr>
+          <tr><td>뇌혈관질환진단</td><td>1,000만</td><td>25,290</td><td>11,440</td><td>6,740</td><td>11,950</td></tr>
+          <tr><td>허혈심장질환진단</td><td>1,000만</td><td>15,800</td><td>6,500</td><td>4,820</td><td>6,750</td></tr>
+          <tr><td class="ok">합계보험료</td><td>—</td><td class="ok">202,610</td><td class="ok">81,966</td><td class="ok">54,438</td><td class="ok">83,546</td></tr>
+        </table>
+      </div>
+      <div class="tbl-note">가입유형: 아빠(간편고지 3.5.5) · 엄마(일반고지) · 아들(건강고지 10년) · 이모(일반고지). 사망시적립액미지급형·월납/20년납·종신/20년납 기준.</div>
+
+      <div class="case-hl" style="margin-top:16px;">
+        <div class="lbl">가족결합할인 신청 시</div>
+        <div class="tx">매달 <b>월 보험료의 5%</b>를 할인받아 총 월 보험료 <b>401,433원</b>. 4인 가족 총 납입보험료 기준 약 <b style="color:var(--gold2);font-size:16px;">505만원 할인!</b></div>
+      </div>
+      <div class="case-hl">
+        <div class="lbl">엄마가 암에 걸리면, 보험료 납입면제 시</div>
+        <div class="tx">가입 후 1년 시점 엄마가 납입면제(잔여 납입보험료 1,775만원 면제)를 받으면, 남은 가족은 <b>추가 5% 할인</b>이 적용되어 총 월 보험료 <b>306,534원</b>. 남은 3인 가족 총 납입보험료 기준 약 <b style="color:var(--gold2);font-size:16px;">795만원 할인!</b></div>
+      </div>
+
+      <p style="margin-top:20px;font-weight:700;color:var(--ink);">가입 전 확인사항</p>
+      <div class="steps">
+        <div class="step">
+          <div class="snum">1</div>
+          <div class="stxt"><div class="t">간편고지형(3종)은 보험료가 더 높을 수 있습니다</div><div class="d">일반심사 가입이 어려운 유병력자(고연령자 포함)를 위한 상품이라 보험료(특약 포함)가 다소 높게 설계되어 있습니다. 유병력자가 아니시라면 동일 상품구조의 일반심사형이 더 저렴할 수 있으니 함께 비교해보시길 권합니다.</div></div>
+        </div>
+        <div class="step">
+          <div class="snum">2</div>
+          <div class="stxt"><div class="t">간편심사도 고지 의무는 있습니다</div><div class="d">항목이 완화됐을 뿐, 청약 전 알릴의무 사항은 일반심사와 마찬가지로 사실대로 알려주셔야 합니다. 알릴의무를 지키지 않으시면 계약이 해지되거나 보험금을 받지 못하실 수 있습니다.</div></div>
+        </div>
+        <div class="step">
+          <div class="snum">3</div>
+          <div class="stxt"><div class="t">청약철회 및 품질보증</div><div class="d">보험증권을 받으신 날부터 15일 이내(청약일로부터 30일 이내에 한함)에는 언제든 청약을 철회하실 수 있습니다. 자필서명·청약서부본전달·약관전달 및 중요내용 설명, 이 3가지 기본사항이 지켜지지 않았다면 3개월 이내에 계약을 취소하실 수 있습니다.</div></div>
+        </div>
+        <div class="step">
+          <div class="snum">4</div>
+          <div class="stxt"><div class="t">예금자보호법 적용 (보험 해약환급금 기준)</div><div class="d">은행 예금과는 별개로, 이 보험의 해약환급금(또는 만기 시 보험금이나 사고보험금)에 기타지급금을 더한 금액을 1인당 "5천만원까지"(본 보험회사의 다른 보호상품과 합산) 보호받으실 수 있습니다.</div></div>
+        </div>
+      </div>
+
+      <p style="margin-top:20px;font-weight:700;color:var(--ink);">5% 할인, 은행 예금과 비교하면?</p>
+      <p style="margin-top:6px;font-size:13px;color:var(--ink3);">위 4인 가족 합계 보험료 <b style="color:var(--ink2);">422,560원 → 401,433원</b>(월 21,127원 절감)을 기준으로 계산하면:</p>
+      <table class="mtable" style="margin-top:10px;">
+        <tr><th>구분</th><th>금액</th></tr>
+        <tr><td>4인 가족 합계 월 절감액<br>(21,127원 × 12개월)</td><td class="ok">연 253,524원</td></tr>
+        <tr><td>은행 정기예금(연 3.0%)으로<br>같은 실수령 이자를 받으려면</td><td class="ok">원금 약 1,000만원</td></tr>
+      </table>
+      <div class="tbl-note">2026년 기준 5대 은행 1년 정기예금 최고금리(연 2.9~3.0%) 기준. 이자소득세 15.4%(소득세 14%+지방소득세 1.4%) 차감 후 실수령액 기준으로 환산했습니다(세전 약 845만원 → 세후 기준 약 999만원). 예금 금리는 상품·시점마다 다르며, 보험료 할인과 예금 이자는 성격이 다른 개념으로 참고용 비교입니다.</div>
+
+      <div class="case-hl">
+        <div class="lbl">쉽게 말하면</div>
+        <div class="tx">가족결합할인 5%는, 매년 <b style="color:var(--gold2);font-size:16px;">약 1,000만원을 은행에 넣어둔 것</b>과 같은 효과입니다. (세금 없는 순수 절감액 기준)</div>
+      </div>
+    </div>
+    <div class="modal-foot">정확한 내용은 약관·상품설명서 및 상담을 통해 확인하시기 바랍니다.</div>
+  </div>
+</div>
+
+<!-- MODAL 9 · 표지 뱃지: 간편심사 -->
+<div class="modal-overlay" id="m9" onclick="if(event.target===this)closeModal('m9')">
+  <div class="modal-panel">
+    <div class="modal-handle"></div>
+    <div class="modal-head">
+      <div><div class="modal-eyebrow">BADGE · 간편심사</div><div class="modal-title">간편심사란?</div></div>
+      <button class="modal-close" onclick="closeModal('m9')" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>일반심사보다 <b>완화된 고지 항목</b>(최근 치료·입원 이력 등 소수 질문)만으로 가입 가능 여부를 확인하는 방식입니다. 인생대표 간편심사는 <b>3.5.5형(3개월/5년/5년)</b>과 <b>3.10.5형(3개월/10년/5년)</b> 두 유형이 있으며, 고객님의 이력에 맞는 유형으로 확인해 드립니다.</p>
+    </div>
+    <div class="modal-foot">상품·시점에 따라 확인 항목과 기준이 다를 수 있어, 정확한 내용은 약관·상품설명서로 확인해야 합니다.</div>
+  </div>
+</div>
+
+<!-- MODAL 10 · 표지 뱃지: 암보장 전용 -->
+<div class="modal-overlay" id="m10" onclick="if(event.target===this)closeModal('m10')">
+  <div class="modal-panel">
+    <div class="modal-handle"></div>
+    <div class="modal-head">
+      <div><div class="modal-eyebrow">BADGE · 암보장 전용</div><div class="modal-title">암보장 전용이라는 것은?</div></div>
+      <button class="modal-close" onclick="closeModal('m10')" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>보장 대상이 <b>암</b>이므로, 암과 관련 없는 질병 이력은 위험 평가에서 분리해 검토합니다. 그래서 일반 건강보험 인수를 막았던 <b>뇌·심혈관 이력</b>도 암보장 인수의 결격 사유가 되지 않는 경우가 있습니다.</p>
+    </div>
+    <div class="modal-foot">인수 가능 여부는 개별 심사 결과에 따라 달라집니다.</div>
+  </div>
+</div>
+
+<!-- MODAL 11 · 표지 뱃지: 가족결합 할인 -->
+<div class="modal-overlay" id="m11" onclick="if(event.target===this)closeModal('m11')">
+  <div class="modal-panel">
+    <div class="modal-handle"></div>
+    <div class="modal-head">
+      <div><div class="modal-eyebrow">BADGE · 가족결합 할인</div><div class="modal-title">가족결합 할인이란?</div></div>
+      <button class="modal-close" onclick="closeModal('m11')" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>피보험자 기준 <b>2인 이상</b> 가족이 각자 <b>월 보험료 4만원 이상</b> 가입하면 신청할 수 있고, 승인 후 <b>월 보험료의 5%</b>를 할인받는 제도입니다. 암PASS 가성비 인기플랜은 가장 낮은 구간(여자 41세 44,088원)도 이미 4만원을 넘어, 가족 모두 <b>추가 부담 없이</b> 결합 요건이 성립합니다. 가족 중 납입면제가 발생하면 <b>최대 10%</b>까지 할인폭이 커집니다.</p>
+    </div>
+    <div class="modal-foot">삼성생명 가족결합할인제도 리플릿(준법감시필 26-2826) 기준. 자세한 예시는 8번 카드에서 확인하세요.</div>
+  </div>
+</div>
+
+<script>
+function openModal(id){
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(id){
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown', function(e){
+  if(e.key==='Escape'){
+    document.querySelectorAll('.modal-overlay.open').forEach(function(m){ m.classList.remove('open'); });
+    document.body.style.overflow='';
+  }
+});
+</script>
